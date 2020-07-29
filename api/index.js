@@ -19,6 +19,7 @@ api.use(cors());
 api.use(morgan('dev'));
 api.use(express.urlencoded({ extended: true }));
 api.use(express.json({ express: true }));
+api.use('/api/', require('../routes'));
 
 //Verificaciones del servidor
 api.get('/', (req, res) => res.send('¡Servidor funcionando!'));
